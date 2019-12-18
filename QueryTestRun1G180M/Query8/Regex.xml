@@ -1,0 +1,84 @@
+<?xml version="1.0"?><bsbm>
+  <querymix>
+     <scalefactor>5000</scalefactor>
+     <warmups>30</warmups>
+     <seed>808080</seed>
+     <querymixruns>150</querymixruns>
+     <minquerymixruntime>1.9559</minquerymixruntime>
+     <maxquerymixruntime>4.7884</maxquerymixruntime>
+     <totalruntime>511.908</totalruntime>
+     <qmph>1054.88</qmph>
+     <cqet>3.41272</cqet>
+     <cqetg>3.26173</cqetg>
+  </querymix>
+  <queries>
+    <query nr="1">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="2">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="3">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="4">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="5">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="6">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="7">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="8">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="9">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="10">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="11">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="12">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="13">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="14">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="15">
+      <executecount>150</executecount>
+      <aqet>3.412718</aqet>
+      <aqetg>3.261732</aqetg>
+      <qps>0.29</qps>
+      <minqet>1.95588440</minqet>
+      <maxqet>4.78843340</maxqet>
+      <avgresults>0.56</avgresults>
+      <minresults>0</minresults>
+      <maxresults>4</maxresults>
+      <timeoutcount>0</timeoutcount>
+    </query>
+  </queries>
+</bsbm>

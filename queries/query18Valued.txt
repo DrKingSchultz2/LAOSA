@@ -1,0 +1,6 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+select ?product ?label ?textual5 where {
+  ?product bsbm:productPropertyTextual5 ?textual5.
+  ?product rdfs:label ?label.
+}

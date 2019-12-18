@@ -1,0 +1,16 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  rev:  <http://purl.org/stuff/rev#>
+PREFIX  bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+
+SELECT  ?person
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product3> ^bsbm:reviewFor/rev:reviewer ?person }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (rev: <http://purl.org/stuff/rev#>)
+         (bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>))
+  (project (?person)
+    (bgp
+      (triple ??P1 bsbm:reviewFor <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product3>)
+      (triple ??P1 rev:reviewer ?person)
+    )))

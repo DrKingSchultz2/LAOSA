@@ -1,0 +1,10 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT REDUCED  ?feature
+WHERE
+  { ?product  bsbm:productFeature  ?feature }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (reduced
+    (project (?feature)
+      (bgp (triple ?product bsbm:productFeature ?feature)))))

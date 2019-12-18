@@ -1,0 +1,9 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT  ?product
+WHERE
+  { ?product  bsbm:productPropertyNumeric1  65 }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (project (?product)
+    (bgp (triple ?product bsbm:productPropertyNumeric1 65))))

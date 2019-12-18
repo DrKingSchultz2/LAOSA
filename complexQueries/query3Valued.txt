@@ -1,0 +1,13 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rev: <http://purl.org/stuff/rev#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?review ?rating2 ?featureLabel where {
+  ?review bsbm:rating1 ?rating1.
+  ?review bsbm:rating2 ?rating2.
+  ?review rev:text ?text.
+  ?review bsbm:reviewFor ?product.
+  ?product bsbm:productFeature ?feature.
+  ?feature rdfs:label ?featureLabel.
+  ?product bsbm:productPropertyNumeric1 ?numeric1.
+  filter (?numeric1 < 3 && ?rating1 >= ?rating2 && ?rating2 < 6)
+}

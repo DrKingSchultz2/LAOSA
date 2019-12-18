@@ -1,0 +1,12 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT  ?review
+WHERE
+  { ?review  bsbm:rating1  ?rating
+    FILTER ( ?rating < 5 )
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (project (?review)
+    (filter (< ?rating 5)
+      (bgp (triple ?review bsbm:rating1 ?rating)))))

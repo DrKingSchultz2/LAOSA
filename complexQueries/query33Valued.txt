@@ -1,0 +1,6 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX bsbm-inst:<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?type where {
+	<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> rdfs:subClassOf* ?type
+}

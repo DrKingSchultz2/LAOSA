@@ -1,0 +1,3 @@
+select ?product where {
+	?product ?a ?f
+}

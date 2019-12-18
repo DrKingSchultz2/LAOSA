@@ -1,0 +1,18 @@
+PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  ?product
+WHERE
+  { ?product  rdf:type    <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> ;
+              rdfs:label  ?label
+  }
+LIMIT   5
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+         (rdfs: <http://www.w3.org/2000/01/rdf-schema#>))
+  (slice _ 5
+    (project (?product)
+      (bgp
+        (triple ?product rdf:type <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5>)
+        (triple ?product rdfs:label ?label)
+      ))))

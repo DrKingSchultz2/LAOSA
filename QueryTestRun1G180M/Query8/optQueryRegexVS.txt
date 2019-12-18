@@ -1,0 +1,12 @@
+PREFIX  rev:  <http://purl.org/stuff/rev#>
+
+SELECT  ?review
+WHERE
+  { ?review  rev:text  ?text
+    FILTER strstarts(?text, "test")
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((rev: <http://purl.org/stuff/rev#>))
+  (project (?review)
+    (filter (strstarts ?text "test")
+      (bgp (triple ?review rev:text ?text)))))

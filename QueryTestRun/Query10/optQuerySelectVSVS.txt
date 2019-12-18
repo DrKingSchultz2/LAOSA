@@ -1,0 +1,18 @@
+PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT  (COUNT(?feature) AS ?count)
+WHERE
+  { ?product  rdf:type             <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> ;
+              bsbm:productFeature  ?feature
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+         (bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (project (?count)
+    (extend ((?count ?.0))
+      (group () ((?.0 (count ?feature)))
+        (bgp
+          (triple ?product rdf:type <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5>)
+          (triple ?product bsbm:productFeature ?feature)
+        )))))

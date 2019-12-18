@@ -1,0 +1,6 @@
+SELECT  ?product
+WHERE
+  { ?product  ?a  ?f }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(project (?product)
+  (bgp (triple ?product ?a ?f)))

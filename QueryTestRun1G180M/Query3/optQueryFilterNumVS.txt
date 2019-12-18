@@ -1,0 +1,14 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT  ?review
+WHERE
+  { ?review  dc:title  ?title
+    FILTER regex(?title, "test")
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (dc: <http://purl.org/dc/elements/1.1/>))
+  (project (?review)
+    (filter (regex ?title "test")
+      (bgp (triple ?review dc:title ?title)))))

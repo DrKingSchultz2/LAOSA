@@ -1,0 +1,10 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT DISTINCT  ?feature
+WHERE
+  { ?product  bsbm:productFeature  ?feature }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (distinct
+    (project (?feature)
+      (bgp (triple ?product bsbm:productFeature ?feature)))))

@@ -1,0 +1,6 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?product ?label ?numeric where {
+    ?product bsbm:productPropertyNumeric3 ?numeric.
+    ?product rdfs:label ?label.
+}

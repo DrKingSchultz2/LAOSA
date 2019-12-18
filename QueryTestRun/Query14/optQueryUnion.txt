@@ -1,0 +1,16 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  ?product ?number
+WHERE
+  { ?product  rdfs:label  ?label
+    OPTIONAL
+      { ?product  bsbm:productPropertyNumeric5  ?number }
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (rdfs: <http://www.w3.org/2000/01/rdf-schema#>))
+  (project (?product ?number)
+    (conditional
+      (bgp (triple ?product rdfs:label ?label))
+      (bgp (triple ?product bsbm:productPropertyNumeric5 ?number)))))

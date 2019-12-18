@@ -1,0 +1,7 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX bsbm-inst:<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX rev: <http://purl.org/stuff/rev#>
+select ?person where {
+  %Product% ^bsbm:reviewFor ?review.
+  ?review rev:reviewer ?person.
+}

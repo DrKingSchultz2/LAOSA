@@ -1,0 +1,21 @@
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT  ?review ?rating2
+WHERE
+  { ?review  bsbm:rating1  ?rating1
+    FILTER ( ?rating1 >= 4 )
+    ?review  bsbm:rating2  ?rating2
+    FILTER ( ?rating2 < 8 )
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((xsd: <http://www.w3.org/2001/XMLSchema#>)
+         (bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (dc: <http://purl.org/dc/elements/1.1/>))
+  (project (?review ?rating2)
+    (filter (< ?rating2 8)
+      (sequence
+        (filter (>= ?rating1 4)
+          (bgp (triple ?review bsbm:rating1 ?rating1)))
+        (bgp (triple ?review bsbm:rating2 ?rating2))))))

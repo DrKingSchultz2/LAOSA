@@ -1,0 +1,4 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+select distinct ?feature where {
+  ?product bsbm:productFeature ?feature
+}

@@ -1,0 +1,8 @@
+SELECT  (count(*) AS ?count)
+WHERE
+  { ?a  ?b  ?c }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(project (?count)
+  (extend ((?count ?.0))
+    (group () ((?.0 (count)))
+      (bgp (triple ?a ?b ?c)))))

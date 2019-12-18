@@ -1,0 +1,6 @@
+Anzahl		=	1	1
+AnzahlVS	=	2	1
+FilterGr	=	3	2
+FilterGrVS	=	4	2
+FilterNum	=	5	3
+FilterNumVS	=	6	3

@@ -1,0 +1,11 @@
+PREFIX  rev:  <http://purl.org/stuff/rev#>
+
+SELECT  ?person
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite1/Review5>
+              rev:reviewer  ?person
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((rev: <http://purl.org/stuff/rev#>))
+  (project (?person)
+    (bgp (triple <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite1/Review5> rev:reviewer ?person))))

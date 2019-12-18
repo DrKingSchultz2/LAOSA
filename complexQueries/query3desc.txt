@@ -1,0 +1,4 @@
+QueryType=Select
+
+rating2=ReviewNumericValue
+x=ProductPropertyNumericValue

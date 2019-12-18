@@ -1,0 +1,34 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  rev:  <http://purl.org/stuff/rev#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  ?review ?rating2 ?featureLabel
+WHERE
+  { ?review   bsbm:rating1          ?rating1 ;
+              bsbm:rating2          ?rating2 ;
+              rev:text              ?text ;
+              bsbm:reviewFor        ?product .
+    ?product  bsbm:productFeature   ?feature .
+    ?feature  rdfs:label            ?featureLabel .
+    ?product  bsbm:productPropertyNumeric1  ?numeric1
+    FILTER ( ( ( ?numeric1 < 3 ) && ( ?rating1 >= ?rating2 ) ) && ( ?rating2 < 6 ) )
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (rev: <http://purl.org/stuff/rev#>)
+         (rdfs: <http://www.w3.org/2000/01/rdf-schema#>))
+  (project (?review ?rating2 ?featureLabel)
+    (filter (< ?numeric1 3)
+      (sequence
+        (filter (exprlist (>= ?rating1 ?rating2) (< ?rating2 6))
+          (bgp
+            (triple ?review bsbm:rating1 ?rating1)
+            (triple ?review bsbm:rating2 ?rating2)
+          ))
+        (bgp
+          (triple ?review rev:text ?text)
+          (triple ?review bsbm:reviewFor ?product)
+          (triple ?product bsbm:productFeature ?feature)
+          (triple ?feature rdfs:label ?featureLabel)
+          (triple ?product bsbm:productPropertyNumeric1 ?numeric1)
+        )))))

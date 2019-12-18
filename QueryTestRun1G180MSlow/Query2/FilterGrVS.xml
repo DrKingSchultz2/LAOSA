@@ -1,0 +1,40 @@
+<?xml version="1.0"?><bsbm>
+  <querymix>
+     <scalefactor>5000</scalefactor>
+     <warmups>30</warmups>
+     <seed>808080</seed>
+     <querymixruns>150</querymixruns>
+     <minquerymixruntime>0.0285</minquerymixruntime>
+     <maxquerymixruntime>0.3208</maxquerymixruntime>
+     <totalruntime>18.514</totalruntime>
+     <qmph>29167.25</qmph>
+     <cqet>0.12343</cqet>
+     <cqetg>0.10953</cqetg>
+  </querymix>
+  <queries>
+    <query nr="1">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="2">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="3">
+      <executecount>0</executecount>
+      <aqet>0.0</aqet>
+    </query>
+    <query nr="4">
+      <executecount>150</executecount>
+      <aqet>0.123426</aqet>
+      <aqetg>0.109527</aqetg>
+      <qps>8.10</qps>
+      <minqet>0.02845970</minqet>
+      <maxqet>0.32084430</maxqet>
+      <avgresults>6246.63</avgresults>
+      <minresults>0</minresults>
+      <maxresults>22155</maxresults>
+      <timeoutcount>0</timeoutcount>
+    </query>
+  </queries>
+</bsbm>

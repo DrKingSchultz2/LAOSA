@@ -1,0 +1,12 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT REDUCED  ?feature
+WHERE
+  { ?product  bsbm:productFeature  ?feature }
+LIMIT   15000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>))
+  (slice _ 15000
+    (reduced
+      (project (?feature)
+        (bgp (triple ?product bsbm:productFeature ?feature))))))

@@ -1,0 +1,15 @@
+ProductType=ProductTypeURI
+ProductFeature2=ProductFeatureURI
+x=ProductPropertyNumericValue
+ProductXYZ=ProductURI
+word1=Dictionary1
+currentDate=CurrentDate
+ReviewXYZ=ReviewURI
+CountryXYZ=CountryURI
+OfferXYZ=OfferURI
+
+
+//FROM HERE ONLY ON THE CUSTOM BSBM
+
+
+ReviewNumber=ReviewNumericValue

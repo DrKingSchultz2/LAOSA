@@ -1,0 +1,29 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  ?product ?number
+WHERE
+  {   { SELECT  ?product
+        WHERE
+          { ?product  rdfs:label  ?label }
+      }
+    UNION
+      { SELECT  ?product ?number
+        WHERE
+          { ?product  rdfs:label            ?label ;
+                      bsbm:productPropertyNumeric5  ?number
+          }
+      }
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (rdfs: <http://www.w3.org/2000/01/rdf-schema#>))
+  (project (?product ?number)
+    (union
+      (project (?product)
+        (bgp (triple ?product rdfs:label ?/label)))
+      (project (?product ?number)
+        (bgp
+          (triple ?product rdfs:label ?/label)
+          (triple ?product bsbm:productPropertyNumeric5 ?number)
+        )))))

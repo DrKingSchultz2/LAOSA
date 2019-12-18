@@ -1,0 +1,10 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select ?review ?rating2 where {
+	?review bsbm:rating1 ?rating1.
+	filter (?rating1 >= 4)  
+	?review bsbm:rating2 ?rating2.
+	filter (?rating2 < 8)
+} 

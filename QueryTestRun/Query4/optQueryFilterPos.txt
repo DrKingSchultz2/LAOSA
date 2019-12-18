@@ -1,0 +1,17 @@
+PREFIX  bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT  ?review
+WHERE
+  { ?review  bsbm:rating1  ?rating ;
+             dc:date       ?date
+    FILTER ( ?rating >= 8 )
+  }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(prefix ((bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>)
+         (dc: <http://purl.org/dc/elements/1.1/>))
+  (project (?review)
+    (sequence
+      (filter (>= ?rating 8)
+        (bgp (triple ?review bsbm:rating1 ?rating)))
+      (bgp (triple ?review dc:date ?date)))))
